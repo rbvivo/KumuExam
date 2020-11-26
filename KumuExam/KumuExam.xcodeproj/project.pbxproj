@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D06E24B256FF9D100DE8D59 /* APResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D06E24A256FF9D100DE8D59 /* APResponse.swift */; };
+		1D06E24E256FF9FA00DE8D59 /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D06E24D256FF9FA00DE8D59 /* TrackService.swift */; };
 		1D30B7B3256FD5F900768C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30B7B2256FD5F900768C8D /* AppDelegate.swift */; };
 		1D30B7B5256FD5F900768C8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30B7B4256FD5F900768C8D /* SceneDelegate.swift */; };
 		1D30B7BA256FD5F900768C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D30B7B8256FD5F900768C8D /* Main.storyboard */; };
@@ -15,9 +17,14 @@
 		1D30B7C2256FD5FD00768C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D30B7C0256FD5FD00768C8D /* LaunchScreen.storyboard */; };
 		1D30B7D3256FDBA100768C8D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30B7D2256FDBA100768C8D /* MainTableViewController.swift */; };
 		1D30B7D6256FDD3B00768C8D /* MainTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30B7D5256FDD3B00768C8D /* MainTableViewModel.swift */; };
+		1DCCC512256FE76E000EDF7E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCC511256FE76E000EDF7E /* ReusableView.swift */; };
+		1DCCC515256FE78C000EDF7E /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCC514256FE78C000EDF7E /* TrackTableViewCell.swift */; };
+		1DCCC51A256FE93E000EDF7E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCC518256FE93E000EDF7E /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D06E24A256FF9D100DE8D59 /* APResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APResponse.swift; sourceTree = "<group>"; };
+		1D06E24D256FF9FA00DE8D59 /* TrackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackService.swift; sourceTree = "<group>"; };
 		1D30B7AF256FD5F900768C8D /* KumuExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KumuExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D30B7B2256FD5F900768C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D30B7B4256FD5F900768C8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		1D30B7C3256FD5FD00768C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D30B7D2256FDBA100768C8D /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		1D30B7D5256FDD3B00768C8D /* MainTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewModel.swift; sourceTree = "<group>"; };
+		1DCCC511256FE76E000EDF7E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		1DCCC514256FE78C000EDF7E /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		1DCCC518256FE93E000EDF7E /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D06E2502570002600DE8D59 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1D06E24A256FF9D100DE8D59 /* APResponse.swift */,
+				1D06E24D256FF9FA00DE8D59 /* TrackService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		1D06E2512570003700DE8D59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DCCC518256FE93E000EDF7E /* Track.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1D06E2522570004B00DE8D59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DCCC511256FE76E000EDF7E /* ReusableView.swift */,
+				1DCCC514256FE78C000EDF7E /* TrackTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1D06E2532570005E00DE8D59 /* ViewControllers+ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1D30B7D2256FDBA100768C8D /* MainTableViewController.swift */,
+				1D30B7D5256FDD3B00768C8D /* MainTableViewModel.swift */,
+			);
+			name = "ViewControllers+ViewModels";
+			sourceTree = "<group>";
+		};
 		1D30B7A6256FD5F900768C8D = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +107,10 @@
 			children = (
 				1D30B7B2256FD5F900768C8D /* AppDelegate.swift */,
 				1D30B7B4256FD5F900768C8D /* SceneDelegate.swift */,
-				1D30B7D2256FDBA100768C8D /* MainTableViewController.swift */,
-				1D30B7D5256FDD3B00768C8D /* MainTableViewModel.swift */,
+				1D06E2512570003700DE8D59 /* Models */,
+				1D06E2502570002600DE8D59 /* Network */,
+				1D06E2532570005E00DE8D59 /* ViewControllers+ViewModels */,
+				1D06E2522570004B00DE8D59 /* Views */,
 				1D30B7B8256FD5F900768C8D /* Main.storyboard */,
 				1D30B7BE256FD5FD00768C8D /* Assets.xcassets */,
 				1D30B7C0256FD5FD00768C8D /* LaunchScreen.storyboard */,
@@ -146,8 +193,13 @@
 				1D30B7D3256FDBA100768C8D /* MainTableViewController.swift in Sources */,
 				1D30B7B3256FD5F900768C8D /* AppDelegate.swift in Sources */,
 				1D30B7BD256FD5F900768C8D /* KumuExam.xcdatamodeld in Sources */,
+				1DCCC515256FE78C000EDF7E /* TrackTableViewCell.swift in Sources */,
 				1D30B7B5256FD5F900768C8D /* SceneDelegate.swift in Sources */,
+				1DCCC51A256FE93E000EDF7E /* Track.swift in Sources */,
 				1D30B7D6256FDD3B00768C8D /* MainTableViewModel.swift in Sources */,
+				1DCCC512256FE76E000EDF7E /* ReusableView.swift in Sources */,
+				1D06E24B256FF9D100DE8D59 /* APResponse.swift in Sources */,
+				1D06E24E256FF9FA00DE8D59 /* TrackService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
