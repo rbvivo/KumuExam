@@ -135,6 +135,7 @@ class MainTableViewModel {
     }
     
     func saveContext() {
+        //save to core data
         do {
             try self.appDelegate.persistentContainer.viewContext.save()
             saveContextSuccessHandler?()

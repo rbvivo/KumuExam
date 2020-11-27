@@ -55,6 +55,7 @@ class MainTableViewController: UIViewController {
             //do something after fetch suceed
             guard let `self` = self else { return }
             self.viewModel.saveContextSuccessHandler = { [weak self] in
+                //do something after save success
                 guard let `self` = self else { return }
                 self.activityIndicator.stopAnimating()
                 self.tableView.reloadData()

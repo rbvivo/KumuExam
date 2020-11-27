@@ -91,7 +91,7 @@ class TrackTableViewCell: UITableViewCell, ReusableView {
             ])
             
         }
-        trackImage.image = nil
+        trackImage.image = UIImage(imageLiteralResourceName: "ImagePlaceholder")
         trackNameLabel.text = track.trackName
         genreNameLabel.text = track.primaryGenreName
         priceLabel.text = String(format:"%.2f", track.trackPrice)
