@@ -18,7 +18,7 @@ struct TrackService: TrackServiceProviding {
         guard let url = URL(string: "https://itunes.apple.com/search?") else {return}
         let urlQueryItemTerm = URLQueryItem(name: "term", value: "star")
         let urlQueryItemCountry = URLQueryItem(name: "country", value: "au")
-        let urlQueryItemMedia = URLQueryItem(name: "media", value: "all")
+        let urlQueryItemMedia = URLQueryItem(name: "media", value: "movie")
         
         guard let urlQuery = url.addQueryParams(newParams: [urlQueryItemTerm, urlQueryItemCountry, urlQueryItemMedia]) else {return}
         let request = URLRequest(url: urlQuery)
@@ -62,18 +62,5 @@ struct TrackService: TrackServiceProviding {
                 }
             }
         }.resume()
-    }
-}
-
-
-extension URL {
-    //To add Query Parameters
-    func addQueryParams(newParams: [URLQueryItem]) -> URL? {
-        guard let urlComponents = NSURLComponents.init(url: self, resolvingAgainstBaseURL: false) else {return nil}
-        if (urlComponents.queryItems == nil) {
-            urlComponents.queryItems = []
-        }
-        urlComponents.queryItems!.append(contentsOf: newParams)
-        return urlComponents.url
     }
 }

@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  fatalError("Unresolved error, \((error as NSError).userInfo)")
              }
          })
-         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+         container.viewContext.mergePolicy = NSMergePolicy.overwrite
          return container
      }()
 

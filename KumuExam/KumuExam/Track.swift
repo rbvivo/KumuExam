@@ -19,17 +19,24 @@ enum CoreDataNames: String {
 }
 
 
+public struct RawServerResponse: Decodable {
+    let resultCount: Int
+    let results: [Track]
+
+}
+
 @objc(Track)
-public class Track: NSManagedObject {
+public class Track: NSManagedObject, Codable {
 
     @NSManaged public var artistName: String?
     @NSManaged public var artworkUrl100: String?
     @NSManaged public var isFavorite: Bool
+    @NSManaged public var longDescription: String?
     @NSManaged public var primaryGenreName: String?
-    @NSManaged public var releaseDate: String?
-    @NSManaged public var trackID: Int32
+    @NSManaged public var trackId: Int64
     @NSManaged public var trackName: String?
     @NSManaged public var trackPrice: Double
+   
 
     
     enum CodingKeys: String, CodingKey {
@@ -37,9 +44,9 @@ public class Track: NSManagedObject {
         case artistName
         case artworkUrl100
         case isFavorite
+        case longDescription
         case primaryGenreName
-        case releaseDate
-        case trackID
+        case trackId
         case trackName
         case trackPrice
       
@@ -57,11 +64,11 @@ public class Track: NSManagedObject {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         artistName = try container.decode(String.self, forKey: .artistName)
-        artworkUrl100 = try container.decode(String.self, forKey: .artworkUrl100)
+        artworkUrl100 = try container.decodeIfPresent(String.self, forKey: .artworkUrl100) ?? ""
         isFavorite = try container.decodeIfPresent(Bool.self, forKey: .isFavorite) ?? false
         primaryGenreName = try container.decode(String.self, forKey: .primaryGenreName)
-        releaseDate = try container.decode(String.self, forKey: .releaseDate)
-        trackID = try container.decode(Int32.self, forKey: .trackID)
+        longDescription = try container.decodeIfPresent(String.self, forKey: .longDescription) ?? ""
+        trackId = try container.decode(Int64.self, forKey: .trackId)
         trackName = try container.decode(String.self, forKey: .trackName)
         trackPrice = try container.decode(Double.self, forKey: .trackPrice)
     }
@@ -73,8 +80,8 @@ public class Track: NSManagedObject {
         try container.encode(artworkUrl100, forKey: .artworkUrl100)
         try container.encode(isFavorite, forKey: .isFavorite)
         try container.encode(primaryGenreName, forKey: .primaryGenreName)
-        try container.encode(releaseDate, forKey: .releaseDate)
-        try container.encode(trackID, forKey: .trackID)
+        try container.encode(longDescription, forKey: .longDescription)
+        try container.encode(trackId, forKey: .trackId)
         try container.encode(trackName, forKey: .trackName)
         try container.encode(trackPrice, forKey: .trackPrice)
       

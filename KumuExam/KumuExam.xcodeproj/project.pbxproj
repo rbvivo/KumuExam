@@ -20,6 +20,10 @@
 		1DCCC512256FE76E000EDF7E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCC511256FE76E000EDF7E /* ReusableView.swift */; };
 		1DCCC515256FE78C000EDF7E /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCC514256FE78C000EDF7E /* TrackTableViewCell.swift */; };
 		1DCCC51A256FE93E000EDF7E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCC518256FE93E000EDF7E /* Track.swift */; };
+		1DD242892570A7F800D2982A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD242882570A7F800D2982A /* UITableView+Extension.swift */; };
+		1DD2428C2570A81700D2982A /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2428B2570A81700D2982A /* URL+Extension.swift */; };
+		1DD242902570F50E00D2982A /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2428F2570F50E00D2982A /* TrackDetailViewController.swift */; };
+		1DD242932570F52A00D2982A /* TrackDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD242922570F52A00D2982A /* TrackDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		1DCCC511256FE76E000EDF7E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		1DCCC514256FE78C000EDF7E /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		1DCCC518256FE93E000EDF7E /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		1DD242882570A7F800D2982A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1DD2428B2570A81700D2982A /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		1DD2428F2570F50E00D2982A /* TrackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
+		1DD242922570F52A00D2982A /* TrackDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,8 @@
 			children = (
 				1D30B7D2256FDBA100768C8D /* MainTableViewController.swift */,
 				1D30B7D5256FDD3B00768C8D /* MainTableViewModel.swift */,
+				1DD2428F2570F50E00D2982A /* TrackDetailViewController.swift */,
+				1DD242922570F52A00D2982A /* TrackDetailViewModel.swift */,
 			);
 			name = "ViewControllers+ViewModels";
 			sourceTree = "<group>";
@@ -107,6 +117,7 @@
 			children = (
 				1D30B7B2256FD5F900768C8D /* AppDelegate.swift */,
 				1D30B7B4256FD5F900768C8D /* SceneDelegate.swift */,
+				1DD242872570A7D900D2982A /* Extensions */,
 				1D06E2512570003700DE8D59 /* Models */,
 				1D06E2502570002600DE8D59 /* Network */,
 				1D06E2532570005E00DE8D59 /* ViewControllers+ViewModels */,
@@ -118,6 +129,15 @@
 				1D30B7BB256FD5F900768C8D /* KumuExam.xcdatamodeld */,
 			);
 			path = KumuExam;
+			sourceTree = "<group>";
+		};
+		1DD242872570A7D900D2982A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DD242882570A7F800D2982A /* UITableView+Extension.swift */,
+				1DD2428B2570A81700D2982A /* URL+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,14 +210,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD242892570A7F800D2982A /* UITableView+Extension.swift in Sources */,
 				1D30B7D3256FDBA100768C8D /* MainTableViewController.swift in Sources */,
 				1D30B7B3256FD5F900768C8D /* AppDelegate.swift in Sources */,
 				1D30B7BD256FD5F900768C8D /* KumuExam.xcdatamodeld in Sources */,
 				1DCCC515256FE78C000EDF7E /* TrackTableViewCell.swift in Sources */,
+				1DD2428C2570A81700D2982A /* URL+Extension.swift in Sources */,
 				1D30B7B5256FD5F900768C8D /* SceneDelegate.swift in Sources */,
+				1DD242902570F50E00D2982A /* TrackDetailViewController.swift in Sources */,
 				1DCCC51A256FE93E000EDF7E /* Track.swift in Sources */,
 				1D30B7D6256FDD3B00768C8D /* MainTableViewModel.swift in Sources */,
 				1DCCC512256FE76E000EDF7E /* ReusableView.swift in Sources */,
+				1DD242932570F52A00D2982A /* TrackDetailViewModel.swift in Sources */,
 				1D06E24B256FF9D100DE8D59 /* APResponse.swift in Sources */,
 				1D06E24E256FF9FA00DE8D59 /* TrackService.swift in Sources */,
 			);
